@@ -6,6 +6,8 @@
 	<a href="https://actions-badge.atrox.dev/gentlehoneylover/unbound-docker/goto?ref=master"><img alt="GitHub Actions" src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fgentlehoneylover%2Funbound-docker%2Fbadge%3Fref%3Dmaster&style=flat" /></a>
 </p><br>
 
+An Unbound Docker image based on Alpine with root.hints and config file included. 
+
 <p align="center">
   <img width="100" src="https://nlnetlabs.nl/static/logos/Unbound/Mark_Unbound_FC_Shaded.svg" alt="Unbound"><br><br>
 </p>
