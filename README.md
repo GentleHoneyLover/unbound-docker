@@ -6,7 +6,7 @@
 	<a href="https://actions-badge.atrox.dev/gentlehoneylover/unbound-docker/goto?ref=master"><img alt="GitHub Actions" src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fgentlehoneylover%2Funbound-docker%2Fbadge%3Fref%3Dmaster&style=flat" /></a>
 </p><br>
 
-An Unbound Docker image based on Alpine with root.hints and config file included. 
+An Unbound Docker image based on [alpinelinux/unbound image](https://hub.docker.com/r/alpinelinux/unbound/tags) with root.hints and config file included. 
 
 <p align="center">
   <img width="100" src="https://nlnetlabs.nl/static/logos/Unbound/Mark_Unbound_FC_Shaded.svg" alt="Unbound"><br><br>
@@ -15,18 +15,13 @@ An Unbound Docker image based on Alpine with root.hints and config file included
 ## What is Unbound
 
 Unbound is a validating, recursive, caching DNS resolver. It is designed to be
-fast and lean and incorporates modern features based on open standards. If you
-have any feedback, we would love to hear from you. Don’t hesitate to
-[create an issue on Github](https://github.com/NLnetLabs/unbound/issues/new)
-or post a message on the [Unbound mailing list](https://lists.nlnetlabs.nl/mailman/listinfo/unbound-users).
-You can learn more about Unbound by reading our
-[documentation](https://unbound.docs.nlnetlabs.nl/).
+fast and lean and incorporates modern features based on open standards. You can learn more about Unbound by reading the  [official documentation](https://unbound.docs.nlnetlabs.nl/).
 
 ## Unbound configuration
 
 All of Unbound's configuration options are described in the `unbound.conf(5)`
-man page, which will be installed and is also available on the Unbound
-[documentation page](https://unbound.docs.nlnetlabs.nl/en/latest/manpages/unbound.conf.html)
+man page, which is available on the Unbound
+[official documentation page](https://unbound.docs.nlnetlabs.nl/en/latest/manpages/unbound.conf.html)
 for the latest version.
 
 An example configuration file, with minimal documentation, is located in
