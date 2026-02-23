@@ -1,7 +1,7 @@
 # unbound-docker
 <p align="center">
 	<a href="https://hub.docker.com/r/gentlehoneylover/unbound/"><img alt="Docker pulls" src="https://img.shields.io/docker/pulls/gentlehoneylover/unbound?logo=docker&label=Docker%20pulls"></a>
-	<a href="https://github.com/GentleHoneyLover/unbound-docker"><img alt="GitHub stars" src="https://img.shields.io/github/stars/gentlehoneylover/unbound-docker?logo=GitHub&label=GitHub%20stars&color=gold"></a>
+	<a href="https://github.com/GentleHoneyLover/unbound-docker"><img alt="GitHub stars" src="https://img.shields.io/github/stars/gentlehoneylover/unbound-docker?style=flat&label=GitHub%20stars&color=gold"></a>
 	<a href="https://github.com/GentleHoneyLover/unbound-docker"><img alt="GitHub issues" src="https://img.shields.io/github/issues/gentlehoneylover/unbound-docker?logo=GitHub&label=GitHub%20issues"></a>
 	<a href="https://actions-badge.atrox.dev/gentlehoneylover/unbound-docker/goto?ref=master"><img alt="GitHub Actions" src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fgentlehoneylover%2Funbound-docker%2Fbadge%3Fref%3Dmaster&style=flat" /></a>
 </p><br>
@@ -57,7 +57,7 @@ services:
     restart: unless-stopped
     cap_add:
       - NET_ADMIN
-		ports:
+    ports:
       - 53:53/tcp
       - 53:53/udp
     volumes:
