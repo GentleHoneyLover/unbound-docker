@@ -26,3 +26,50 @@ for the latest version.
 
 An example configuration file, with minimal documentation, is located in
 [doc/example.conf](https://github.com/NLnetLabs/unbound/blob/master/doc/example.conf.in).
+
+## Installation
+You can pull it from the Docker Hub via:
+```sh
+docker pull docker.io/gentlehoneylover/unbound:latest
+```
+Run it via Docker CLI or docker-compose (examples below).
+
+A fresh root.hints and unbound.conf example (with documentation) are included. To change the config file, mount `/etc/unbound/unbound.conf.d` as a volume.
+
+## Example docker CLI command:
+```sh
+docker run -d \
+  --name=unbound \
+  --restart unless-stopped \
+	--cap-add NET_ADMIN \
+  -p 53:53/tcp \
+  -p 53:53/udp \
+  -v /path/to/volumes/unbound/:/etc/unbound/unbound.conf.d \
+  docker.io/gentlehoneylover/unbound:latest
+```
+
+## Example compose file:
+```yaml
+services:
+  unbound:
+    container_name: unbound
+    image: docker.io/gentlehoneylover/unbound:latest
+    restart: unless-stopped
+    cap_add:
+      - NET_ADMIN
+		ports:
+      - 53:53/tcp
+      - 53:53/udp
+    volumes:
+      - /path/to/volumes/unbound/:/etc/unbound/unbound.conf.d
+```
+
+## Ports
+|  Port   | What it is for                                                         |
+| :-----: | ---------------------------------------------------------------------- |
+| `53`  | Default DNS port — can be chaged in unbound.conf                         |
+
+## Volumes
+|     Volume     | What it is for                                                       |
+| :------------: | -------------------------------------------------------------------- |
+|   `/etc/unbound/unbound.conf.d`    | Folder where unbound config file lives inside the container |
