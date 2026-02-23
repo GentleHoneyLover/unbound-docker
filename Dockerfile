@@ -6,6 +6,6 @@ LABEL maintainer="gentlehoneylover"
 RUN wget -O /etc/unbound/root.hints https://www.internic.net/domain/named.root
 
 # Copy local unbound.conf into place
-COPY unbound.conf /etc/unbound/unbound.conf
+COPY unbound.conf /etc/unbound/unbound.conf.d/unbound.conf
 
 
