@@ -41,7 +41,7 @@ A fresh root.hints and unbound.conf example (with documentation) are included. T
 docker run -d \
   --name=unbound \
   --restart unless-stopped \
-	--cap-add NET_ADMIN \
+  --cap-add NET_ADMIN \
   -p 53:53/tcp \
   -p 53:53/udp \
   -v /path/to/volumes/unbound/:/etc/unbound/unbound.conf.d \
