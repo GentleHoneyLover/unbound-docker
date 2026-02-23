@@ -22,7 +22,7 @@ jobs:
         uses: lucacome/docker-image-update-checker@v1
         with:
           base-image: alpinelinux/unbound:latest
-          image: ${{ secrets.DOCKERHUB_USERNAME }}/unbond:latest
+          image: ${{ secrets.DOCKERHUB_USERNAME }}/unbound:latest
 
       - name: Check result
         run: 'echo "Needs updating: ${{ steps.check.outputs.needs-updating }}"'
@@ -54,7 +54,7 @@ jobs:
           # Note: tags has to be all lower-case
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           tags: |
-            docker.io/${{ secrets.DOCKERHUB_USERNAME }}/unbond:latest
+            docker.io/${{ secrets.DOCKERHUB_USERNAME }}/unbound:latest
           # build on all branches, push only on master branch
           push: ${{ github.ref == 'refs/heads/master' }}
         if: steps.baseupdatecheck.outputs.needs-updating == 'true'
